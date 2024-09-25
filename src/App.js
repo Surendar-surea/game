@@ -1,24 +1,22 @@
 import logo from './logo.svg';
 import './App.css';
-
+import {Routes,Route} from "react-router-dom"
+import GameLogic from "./components/GameLogic"
+import ScoreBoard from "./components/ScoreBoard"
+import ResultPage  from "./components/ResultPage"
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+   
+   <div>
+    <h1>Stone ,Paper and Scissor Game</h1>
+   
+    <Routes>
+      <Route path="/" element={<GameLogic/>}/>
+      <Route path="/result" element={<ResultPage/>}/>
+      </Routes>
+    
+  
+   </div>
   );
 }
 
